@@ -1,0 +1,25 @@
+# This is a systemd service file, should be edited and 
+# copied to /etc/systemd/system
+
+[Unit]
+Description=Telegram doorbell bot
+After=network.target
+
+[Service]
+Type=simple
+# ws281x unfortunately needs root to work well
+User=root
+Group=root
+
+# Edit all these as needed
+Environment="PROJECT_DIR=/home/pi/ovikello"
+WorkingDirectory=/home/pi/ovikello
+Environment="VIRTUAL_ENV=/${PROJECT_DIR}/venv"
+Environment="PATH=$VIRTUAL_ENV/bin:$PATH"
+
+# These should work as they are
+ExecStart=/bin/sh -c '${VIRTUAL_ENV}/bin/python main.py'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
