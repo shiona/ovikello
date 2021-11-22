@@ -1,0 +1,9 @@
+[DEFAULT]
+# Telegram bot id
+telegram_token = 1234567890:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# How many WS2812 leds in the strip
+led_count = 6
+# Which pin controls the leds. Probably has to be 18 (broadcom numbering)
+led_pin = 18
+
