@@ -1,5 +1,5 @@
-from telegram.ext import Updater, CallbackQueryHandler, CommandHandler
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import Updater, CommandHandler
+from telegram import Update
 
 CHECKMARK = '\u2713'
 

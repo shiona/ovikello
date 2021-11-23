@@ -1,8 +1,9 @@
+import logging
+
 import bot
 import config
 import led
 
-import logging
 
 def main():
 	logging.basicConfig(level=10)
