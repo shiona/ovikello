@@ -14,6 +14,7 @@ def main():
 
     logging.info("Setup done, starting bot")
     tgbot.start()
+    logging.info("tgbot stopped, restarting")
 
 if __name__ == '__main__':
     main()
